@@ -1,0 +1,10 @@
+opencv-python
+torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+numpy<2
+onnx==1.14.0
+onnxruntime-gpu==1.16.2
+onnx2torch
+tqdm
+scikit-image
+tensorboard
+timm==0.5.4
