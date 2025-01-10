@@ -309,7 +309,7 @@ if __name__ == "__main__":
     parser.add_argument('--data_root', type=str, default='./dataset_root/', help='dataset root folder')
     parser.add_argument('--data_reg_root', type=str, default=None, help='dataset path for regularization (tested with WebFace260) (optional/experimental)')
     parser.add_argument('--inswapper_path', type=str, default='./weights/inswapper_128.pth', help='path to inswapper weights and used if pretrained=True')
-    parser.add_argument('--recognition_model_path', type=str, default='./weights/w600k_r50_.pt', help='path to recognition model')
+    parser.add_argument('--recognition_model_path', type=str, default='./weights/w600k_r50.pt', help='path to recognition model')
     parser.add_argument('--fan_path', type=str, default='./weights/WFLW_4HG.pth', help='path to AdaptiveWingLoss FAN weights for eye landmark loss')
     parser.add_argument('--checkpoint_path', type=str, default='./checkpoints/', help='path to save checkpoints')
     parser.add_argument('--log_path', type=str, default='./logs/', help='path to save logs')
