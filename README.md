@@ -19,6 +19,12 @@ Download required models/weights from [here](https://github.com/xaxsr/Xinswapper
 
 
 ```bash
+# clone repo
+git clone https://github.com/xaxsr/Xinswapper.git
+cd Xinswapper
+git submodule init
+git submodule update
+
 # create environment (tested with python 3.10)
 python -m venv venv
 source venv/bin/activate
