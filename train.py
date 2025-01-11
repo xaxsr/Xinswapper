@@ -63,7 +63,7 @@ def main(args):
             return
 
     if os.path.isfile(args.recognition_model_path):
-        print(f">load recognition model '{args.inswapper_path}'")
+        print(f">load recognition model '{args.recognition_model_path}'")
         recognition_model = torch.load(args.recognition_model_path).to(device)
         recognition_model.eval()
         print(">recognition model successfully loaded")
@@ -196,7 +196,7 @@ def main(args):
             real_features = net_d.get_feature(norm_target)
             feature_loss = feat_criterion(fake_features["3"], real_features["3"])  # 0.0
 
-            g_loss = args.weights_adv*adversarial_loss + args.weights_rec*reconstruction_loss + args.weights_id*id_loss + args.weights_style*style_loss + args.weights_feat*feature_loss + args.weights_eyes*eyes_loss # + args.weights_perceptual*perceptual_loss
+            g_loss = args.weights_adv*adversarial_loss + args.weights_rec*reconstruction_loss + args.weights_id*id_loss + args.weights_style*style_loss + args.weights_feat*feature_loss + args.weights_eyes*eyes_loss
 
             g_loss.backward()
             if args.clip_grad:
