@@ -167,7 +167,7 @@ def main(args):
 
             # eye landmark loss
             if args.eye_landmarks:
-                x_eyes, x_heatmap_left, x_heatmap_right = detect_landmarks(net_fan, target, args.image_size)
+                x_eyes, x_heatmap_left, x_heatmap_right = detect_landmarks(net_fan, norm_target, args.image_size)
                 y_eyes, y_heatmap_left, y_heatmap_right = detect_landmarks(net_fan, img_fake, args.image_size)
                 eyes_loss = eyes_criterion(x_heatmap_left, y_heatmap_left) + eyes_criterion(x_heatmap_right, y_heatmap_right)
 
